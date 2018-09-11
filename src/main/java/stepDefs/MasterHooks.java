@@ -11,16 +11,16 @@ public class MasterHooks extends DriverFactory {
 		driver = getDriver();
 	}
 
-//	@After
-//	public void tearDown() {
-//		try {
-//			if (driver != null) {
-//				driver.manage().deleteAllCookies();
-//				driver.quit();
-//				driver = null;
-//			}
-//		} catch (Exception e) {
-//			System.out.println(e.getMessage());
-//		}
-//	}
+	@After
+	public void tearDown() {
+		try {
+			if (driver != null) {
+				driver.manage().deleteAllCookies();
+				driver.quit();
+				driver = null;
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }
